@@ -1,0 +1,31 @@
+#include "sort.h"
+
+/**
+ * bubble_sort - Sorts an array of integers using the bubble sort algorithm
+ * @array: The array to be sorted
+ * size: The size of the array to be sorted
+ */
+void bubble_sort(int *array, size_t size)
+{
+	size_t index = 0, count = 0;
+	int smaller;
+	int bigger;
+	
+	while (index < size)/*(index = 0; index < size; index++)*/
+	{
+		if (array[index + 1] == '\0')
+			break;
+		if (array[index] > array[index + 1])
+		{
+			bigger = array[index];
+			smaller = array[index + 1];
+			array[index] = smaller;
+			array[index + 1] = bigger;
+			print_array(array, size);
+			index = 0;
+			continue;
+		}
+	index++;
+	count++;
+	}
+}
